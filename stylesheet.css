@@ -1,0 +1,24 @@
+body{
+	background-color: #F8F8F8;
+}
+
+
+
+
+#header{
+	font-family: 'Josefin Sans', sans-serif;
+	color: gray;
+	text-align: center;
+	font-size: 7em;
+	font-weight: none;
+}
+
+td{
+	border: 5px solid aqua;
+	padding-left:50px;
+	padding-right:50px;
+}
+
+.nav{
+	height: 75px;
+}
