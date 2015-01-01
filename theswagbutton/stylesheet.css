@@ -1,8 +1,12 @@
 .centered{
-	width:50%;
+	height:53%;
 }
 
 table{
 	height: 100%;
 
+}
+
+#space{
+	height:20%;
 }
