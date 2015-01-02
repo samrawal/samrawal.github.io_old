@@ -6,7 +6,7 @@ table{
 	/*border: black dotted 5px;*/
 	position: relative;
 
-	margin: 60px auto;
+	margin: 65px auto;
 }
 
 td{
@@ -28,6 +28,7 @@ td{
 	
 	text-decoration: none;
 	font-family: 'Raleway', sans-serif;
+	font-size:1.1em;
 	color: grey;
 }
 
