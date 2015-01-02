@@ -28,6 +28,7 @@ td{
 	
 	text-decoration: none;
 	font-family: 'Raleway', sans-serif;
+    -webkit-text-size-adjust: 100%;
 	font-size:1.1em;
 	color: grey;
 }
