@@ -3,10 +3,40 @@
 }
 
 table{
-	height: 100%;
+	/*border: black dotted 5px;*/
+	position: relative;
+
+	margin: 60px auto;
+}
+
+td{
+	padding-left: 2em;
+	padding-right:2em;
 
 }
 
 #space{
 	height:20%;
 }
+
+.hidden{
+	height:0px;
+	width:0px;
+}
+
+.links:link{
+	
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	color: grey;
+}
+
+.links:visited{
+	color:grey;
+}
+
+.links:hover{
+	color:black;
+}
+
+
