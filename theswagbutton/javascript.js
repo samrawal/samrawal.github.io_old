@@ -5,6 +5,8 @@ var audio4 = new Audio("four.mp3");
 var audio5 = new Audio("five.mp3");
 var audio6 = new Audio("six.mp3");
 
+var random;
+
 
 var onClick = function(){
 	
@@ -12,6 +14,7 @@ var onClick = function(){
 	document.getElementById("button").src="SwagButton_Pressed.png";
 	setTimeout(playSound, 300);
 	
+    random = Math.floor(Math.random()*6+1);
 
 
 };
@@ -20,7 +23,6 @@ var onClick = function(){
 var playSound = function(){
 	document.getElementById("button").src="SwagButton.png";
 
-	var random = Math.floor(Math.random()*6+1);
 	switch(random)
             {
                 case 1:
