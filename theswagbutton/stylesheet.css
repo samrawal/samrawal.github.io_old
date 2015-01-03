@@ -24,12 +24,13 @@ td{
 	width:0px;
 }
 
+
+
 .links:link{
 	
 	text-decoration: none;
 	font-family: 'Raleway', sans-serif;
-    -webkit-text-size-adjust: 100%;
-	font-size:2vw;
+	font-size:1.5em;
 	color: grey;
 }
 
@@ -41,11 +42,7 @@ td{
 	color:black;
 }
 
-@media screen and (max-width:640px){
-   .links {
-     font-size:50px; 
-   }
-}
+
 
 h1{
 	font-family: 'Raleway', sans-serif;
