@@ -41,6 +41,12 @@ td{
 	color:black;
 }
 
+@media screen and (max-width:640px){
+   .links {
+     font-size:50px; 
+   }
+}
+
 h1{
 	font-family: 'Raleway', sans-serif;
 	font-size:3em;
