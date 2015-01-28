@@ -1,8 +1,44 @@
 body{
 	background-color: #F8F8F8;
+
+}
+p{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:1.2em;
+	position: relative;
 }
 
+a{
+	#totop{
+	transition:.7s;
+	
+	text-decoration: none;
+	color: gray;
 
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.3em;
+
+
+	bottom: 5px;
+	left: 46.7%;
+	position: fixed;
+}
+}
+
+.titles{
+	font-family: 'Josefin Sans', sans-serif;
+	color:gray;
+	font-size: 5em;
+	position: relative;
+}
+
+.subtitles{
+	font-family: 'Josefin Sans', sans-serif;
+	color: black;
+	font-size:2.2em;
+	position: absolute;
+	top: 0;
+}
 
 
 #header{
@@ -13,8 +49,8 @@ body{
 	font-weight: none;
 }
 
-td{
-	border: 5px solid aqua;
+#contents{
+	border: 1px dotted aqua;
 	padding-left:50px;
 	padding-right:50px;
 }
@@ -22,3 +58,78 @@ td{
 .nav{
 	height: 75px;
 }
+
+
+.iconimg{
+	transform: scale(1);
+	transition:.5s;
+
+}
+
+.iconimg:hover{
+	transform: scale(1.2);
+	opacity: 0.8;
+  	transition:.5s;
+  
+}
+
+
+.spacer{
+	height: 100%;
+}
+
+
+#totop{
+	transition:.7s;
+	
+	text-decoration: none;
+	color: gray;
+
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.3em;
+
+
+	bottom: 5px;
+	left: 46.7%;
+	position: fixed;
+}
+
+#totop:hover{
+	color: black;
+	transition:.7s;
+}
+
+/*td{
+	border: 1px black solid;
+}*/
+
+.music{
+	text-align: center;
+	padding:10px
+}
+
+#youtube{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5em;
+
+	top: 30	;
+	position: relative;
+}
+
+#youtubelink{
+	transition:.7s;
+	text-decoration: none;
+	color:gray;
+}
+
+#youtubelink:hover{
+	transform: scale(1.05);
+	color:black;
+	transition:.7s;
+}
+
+.contenttable{
+	position: relative;
+	top: -60;
+}
+
