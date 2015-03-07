@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+
+
+		<script>
+
+			document.domain="samrawal.me"
+			function onSubmit(){
+				var weight = document.getElementById("getWeight").value;
+				var activity = document.getElementById("getActivity").value;
+				
+				getCal(weight, activity);
+
+			}
+			function getCal(weight, activity){
+				var xhr = new XMLHttpRequest();
+
+
+
+				var url="http://api.wolframalpha.com/v2/query?input="+activity+" "+weight+" lbs physical activity"+"&appid=J8YE35-H8W27T8EK5";
+
+
+				xhr.open("GET", url, false);
+				xhr.send();
+
+				console.log(xhr.statusText);
+
+
+		}
+		
+	</script>
+
+	<textarea id="getWeight">Enter Weight</textarea>
+	<textarea id="getActivity">Enter Activity</textarea>
+	<button onClick="onSubmit()">Send</button>
+
+	<br><br>
+	<p id="calories"> </p>
+
+
+</body>
+</html>
