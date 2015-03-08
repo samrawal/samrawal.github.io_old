@@ -57,4 +57,6 @@ function printOutput(){
 			document.getElementById("fitness").innerHTML+="Participate in <strong>"+goodoutput[i][0]+"</strong> for <strong>"+(Math.round(goodoutput[i][1]*100)/100)+" hours a week</strong>.<br>";
 	}		
 			
+			window.location.href="#suggestions";
+
 	}
