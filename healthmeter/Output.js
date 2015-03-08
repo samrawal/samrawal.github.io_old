@@ -49,12 +49,12 @@ function printOutput(){
 
 			document.getElementById("diet_total").innerHTML="<u>All in all, you will be consuming <strong>"+(parseInt(unhealthyCalories)-parseInt(healthyCalories))+" fewer total calories every day</strong>.</u>";
 
-			document.getElementById("fitness_intro").innerHTML="We calculated your Basal metabolic rate (BMR) based off information you provided. Judging from the activities you stated you enjoyed, consider any of the following (or even a mix!):";
+			document.getElementById("fitness_intro").innerHTML="We calculated your Basal metabolic rate (BMR) based off information you provided. Judging from the activities you stated you enjoyed, consider any of the following (or even a mix!) to <strong>lost a pound per week</strong>:";
 
 
 	for (var i=0; i<goodoutput.length; i++)
 	{
-			document.getElementById("fitness").innerHTML+="Participate in <strong>"+goodoutput[i][0]+"</strong> for <strong>"+(Math.round(goodoutput[i][1]*100)/100)+" hours a week to lose a pound.</strong>.<br>";
+			document.getElementById("fitness").innerHTML+="Participate in <strong>"+goodoutput[i][0]+"</strong> for <strong>"+(Math.round(goodoutput[i][1]*100)/100)+" hours a week</strong>.<br>";
 	}		
 			
 	}
