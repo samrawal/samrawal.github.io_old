@@ -1,0 +1,386 @@
+<html>
+	<head>
+
+		<title>HealthMeter: Personalized Health Goals</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script type="text/javascript" src="JSMain.js"> </script>
+		<script type="text/javascript" src="Food.js"> </script>
+		<script type="text/javascript" src="Output.js"> </script>
+		<script type="text/javascript" src="Exercise.js"> </script>
+
+<script src="jquery-1.11.1.min.js"></script>
+
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+</script>
+			
+
+
+	</head>
+
+	<body>
+
+<!-- 		<div id="nav">
+			<br><br>
+			<a href="#attributes">Attributes</a><br>
+			<a href="#food">Diet</a><br>
+			<a href="#exercise">Activities</a>
+				</div> -->
+
+
+		<div class="container-flow jumbotron">
+			<div class="row">
+				<div class="col-lg-12">
+
+				<center><h1 id="healthTitle">HEALTH</h1><h1 id="meterTitle">METER</h1>
+					<p><uppercase>Personalized Goals to Achieve and Maintain Good Health</uppercase></p>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<center>
+		
+		<a name="attributes"></a>
+		<div class="attributesPanel">
+			<br>
+
+			<h2>We'll begin by collecting some objective facts about you. This will help us determine your necessary diet and exercise amounts!</h2>
+
+			<br><br>
+		<textarea placeholder="Age" id="age" class="input" ></textarea><p class="checker" id="agechecker"> </p>
+		<br><br><br>
+		<textarea placeholder="Weight (lbs.)" id="weight" class="input"></textarea><p class="checker" id="weightchecker"> </p>
+		<br><br><br>
+		<textarea placeholder="Height (in.)" id="height" class="input"></textarea><p class="checker" id="heightchecker"> </p>
+		<br><br><br>
+		<form action="">
+			<table>
+				<tr class="gender">
+
+					<td class="gender"><center><input type="radio" name="gender" value="male" id="male" class="css-label"></td>
+					<td class="gender"><center><input type="radio" name="gender" value="female" class="css-label"></td>
+				</tr>
+
+				<tr>
+					<td class="gender"><center><p>Male</p></td>
+					<td class="gender"> <center><p>Female</p></td>
+				</tr>
+			</table>
+
+		</form>
+		<br>
+		<button type="button" onClick="submitButton()" class="inline1" id="submit">Submit</button>
+
+
+		<p id="submitIndicator"> </p><br>
+	</div>
+
+			<br><br>
+
+
+	<a name="food"></a>		
+	<div class="foodPanel">
+		<br>
+
+		<h2>Please take a few moments to note what foods you eat every day. If you can't find a particular food, try searching for it in the
+			searchbox in the bottom left. It's important for us to be able to determine your rough daily caloric input for our suggestions.</h2>
+
+		<br><br>
+	<form action="">	
+	<table width="90%" height="50%">
+			<tr>
+				<td class="food">
+					<center>
+					<img src="icons/pizza.png" width="70px" />
+					<select id="pizza">
+					  <option value="0">0</option>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					</select>
+				<p>Pizza</p></td>
+
+
+				<td class="food">
+					<center>
+					<img src="icons/fries.png" width="70px" />
+					<select id="fries">
+					  <option value="0">0</option>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					</select>
+				<p>Fries</p></td>
+
+
+				<td class="food">			
+					<center>
+					<img src="icons/hamburger.png" width="70px" />		
+						<select id="burger">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					  	  <option value="5">5</option>
+						</select>
+					<p>Burger</p></td>
+
+
+				<td class="food">
+					<center>
+					<img src="icons/soda.png" width="36px" />						
+						<select id="soda">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					  	  <option value="5">5</option>
+						</select>
+					<p>Soda</p></td>
+				
+
+
+				<td class="food">
+					<center>
+					<img src="icons/chips.png" width="60px" />	
+						<select id="chips">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					      <option value="5">5</option>
+						</select>
+					<p>Chips</p></td>
+			</tr>
+
+			<tr>
+				<td class="food">
+					<center>
+					<img src="icons/chicken.png" width="70px" />	
+						<select id="friedchicken">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					      <option value="5">5</option>
+						</select>
+					<p>Fried Chicken</p></td>
+
+
+				<td class="food">
+					<center>
+					<img src="icons/icecream.png" width="70px" />	
+						<select id="icecream">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					      <option value="5">5</option>
+						</select>
+					<p>Ice Cream</p></td>
+
+
+				<td class="food">
+					<center>
+					<img src="icons/milkshake.png" width="40px" />	
+						<select id="milkshake">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					      <option value="5">5</option>
+						</select>
+					<p>Milkshake</p></td>
+
+
+				<td class="food">
+					<center>
+					<img src="icons/macncheese.png" width="86px" />	
+						<select id="macncheese">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					      <option value="5">5</option>
+						</select>
+					<p>Macaroni and Cheese</p></td>
+
+
+				<td class="food">
+					<center>
+					<img src="icons/nachos.png" width="75px" />	
+						<select id="nachos">
+						  <option value="0">0</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+					      <option value="5">5</option>
+						</select>
+					<p>Nachos</p></td>
+			</tr>
+		</table>
+
+		<table width="90%">
+			<tr width="100%">
+				<td class="food2">
+					<center><textarea placeholder="Enter any other food here" id="otherInput"></textarea>
+					<button type="button" onClick="otherSubmitButton()" class="btn btn-warning">Add</button>
+					<br><br>
+					<p id="otherSubmit"> </p>
+				</td>
+				
+
+
+				<td class="submitButton"><button type="button" onClick="foodSubmitButton()" class="btn btn-info">Submit Foods</button></td>
+			</tr>
+		</table>
+	</div>
+
+<br>
+
+		<a name="exercise"></a>
+		<div class="exercisePanel">
+			<br>
+
+			<h2>Please check any activities you enjoy participating in or are interesting. We will try to suggest ideal amounts of times
+				for your preferred activities needed to stay in good health!</h2>
+
+			<br><br>
+		<form action="">
+			<table width="85%" height="75%">
+				<tr>
+					<td class="exercise">
+						<center>
+						<img src="icons/basketball.png" width="60px" />
+						<input type="checkbox" name="exercise" value="0"><p>Basketball</td>
+					<td class="exercise"><center>
+					<img src="icons/football.gif" width="60px" />	<input type="checkbox" name="exercise" value="1"><p>Football</td>
+					<td class="exercise"><center>
+					<img src="icons/baseball.png" width="60px" />	<input type="checkbox" name="exercise" value="2"><p>Baseball</td>
+					<td class="exercise"><center>
+					<img src="icons/soccer.png" width="60px" />	<input type="checkbox" name="exercise" value="3"><p>Soccer</td>
+					<td class="exercise"><center>
+					<img src="icons/running.png" width="70px" />	<input type="checkbox" name="exercise" value="4"><p>Running</td>
+				</tr>
+				
+				<tr>
+					<td class="exercise"><center>
+					<img src="icons/swimming.png" width="50px" />	<input type="checkbox" name="exercise" value="5"><p>Swimming</td>
+					<td class="exercise"><center>
+					<img src="icons/tennis.png" width="60px" />	<input type="checkbox" name="exercise" value="6"><p>Tennis</td>
+					<td class="exercise"><center>
+					<img src="icons/walking.png" width="36px" />	<input type="checkbox" name="exercise" value="7"><p>Walking</td>
+					<td class="exercise"><center>
+					<img src="icons/biking.png" width="60px" />	<input type="checkbox" name="exercise" value="8"><p>Biking</td>
+					<td class="exercise"><center>
+					<img src="icons/yoga.png" width="50px" />	<input type="checkbox" name="exercise" value="9"><p>Yoga</td>
+				</tr>
+
+				<tr>
+					<td class="exercise"><center>
+					<img src="icons/catch.png" width="60px" />	<input type="checkbox" name="exercise" value="10"><p>Catch</td>
+					<td class="exercise"><center>
+					<img src="icons/golf.png" width="60px" />	<input type="checkbox" name="exercise" value="11"><p>Golf</td>
+					<td class="exercise"><center>
+					<img src="icons/bowling.png" width="60px" />	<input type="checkbox" name="exercise" value="12"><p>Bowling</td>
+					<td class="exercise"><center>
+					<img src="icons/frisbee.png" width="60px" />	<input type="checkbox" name="exercise" value="13"><p>Frisbee</td>
+					<td class="exercise"><center>
+					<img src="icons/hiking.png" width="60px" />	<input type="checkbox" name="exercise" value="14"><p>Hiking</td>
+				</tr>
+
+				<tr>
+					<td class="exercise"><center>
+					<img src="icons/pingpong.png" width="60px" />	<input type="checkbox" name="exercise" value="15"><p>Ping Pong</td>
+					<td class="exercise"><center>
+					<img src="icons/volleyball.png" width="55px" />	<input type="checkbox" name="exercise" value="16"><p>Volleyball</td>
+					<td class="exercise"><center>
+					<img src="icons/racquetball.png" width="60px" />	<input type="checkbox" name="exercise" value="17"><p>Racquetball</td>
+					<td class="exercise"><center>
+					<img src="icons/rockclimbing.png" width="65px" />	<input type="checkbox" name="exercise" value="18"><p>Rock Climbing</td>
+					<td class="exercise"><center>
+					<img src="icons/weightlifting.png" width="83px" />	<input type="checkbox" name="exercise" value="19"><p>Weight Lifting</td>
+				</tr>
+
+				<tr>
+					<td class="exercise"><center>
+					<img src="icons/jogging.png" width="62px" />	<input type="checkbox" name="exercise" value="20"><p>Jogging</td>
+					<td class="exercise"><center>
+					<img src="icons/badminton.png" width="62px" />	<input type="checkbox" name="exercise" value="21"><p>Badminton</td>
+					<td class="exercise"><center>
+					<img src="icons/jumprope.png" width="62px" />	<input type="checkbox" name="exercise" value="22"><p>Jump Rope</td>
+					<td class="exercise"><center>
+					<img src="icons/boxing.png" width="62px" />	<input type="checkbox" name="exercise" value="23"><p>Boxing</td>
+					<td class="exercise"><center>
+					<img src="icons/lacrosse.png" width="62px" />	<input type="checkbox" name="exercise" value="24"><p>Lacrosse</td>
+				</tr>
+
+			</table>
+
+			<br><button type="button" onClick="getPrefExercises()" class="btn btn-info">Submit Exercises</button>
+			<br><br><br>
+		</div>
+
+
+	<br>
+			<a name="suggestions"></a>
+
+			<div class="suggestionPanel">
+			<h1>Fitness Suggestions</h1>
+			<p id="intro"> </p>
+			<p id="diet"> </p>
+			<br>
+			<p id="diet_total"> </p>
+			<br>
+			<p id="fitness_intro"> </p>
+			<p id="fitness"> </p>
+		</div>
+
+
+	</center>
+
+	</body>
+</html>
